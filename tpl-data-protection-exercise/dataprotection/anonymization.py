@@ -16,8 +16,8 @@ def anonymize(people):
 
         anonymized_item = person.copy()
 
-        anonymized_item["Birth_Year"]= person["birthdate"][:4]
-        anonymized_item["City_Initial"] = person["city"][0] 
+        anonymized_item["birth_year"]= int(person["birthdate"][:4])
+        anonymized_item["city_initial"] = person["city"][0] 
 
         del anonymized_item["name"]
         del anonymized_item["city"]
